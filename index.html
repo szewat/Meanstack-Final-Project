@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-App="galleryApp">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Artist Alley</title>
+
+	<link type="text/css" rel="stylesheet" href="css/main.css"/>
+
+	<script src="js/modernizr.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular-route.min.js"></script>
+
+	<script src="app/app.js"></script>
+	<script src="app/controllers/controllers.js"></script>
+
+</head>
+
+<body>
+	<div class="main-wrapper">
+		<header ng-include="'pages/navigation.html'">
+
+		</header>
+
+		<section class="main-content" ng-view>
+			
+		</section>
+
+		<footer ng-include="'pages/footer.html'">
+
+		</footer>
+	</div>
+</body>
+
+</html>
