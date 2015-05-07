@@ -1,55 +1,95 @@
-galleryApp.controller("pageControllers", function($scope, FIREBASE_URL, $firebaseArray, $firebaseObject){
+// =================WHAT I REALLY WANT TO PUSH==========================
+galleryApp.controller("pageControllers", function($scope,
 
-// =======TESTING ON PUSHING BASE ON CLASS NOTES=======
-    var ref = new Firebase(FIREBASE_URL);
-    var postRef = ref.child('portfolios');
+$scope.portfolio = [
 
-    $scope.portfolios = $firebaseArray(postRef);
+{
+author: 'universe511', 
+title: 'Flower on Still Water', 
+description: 'Floating on a distant faraway sea, I think of you', 
+imageurl: 'images/still-life/stilllife1.jpg' },
 
-    console.log(postRef.key());
+{
+author: 'glassy8989', 
+title: 'Green Leaves', 
+description: 'This is all too much green.', 
+imageurl: 'images/still-life/stilllife2.jpg' },
 
-    postRef.on('value', function(snapshot){
-      console.log(snapshot.val());
-      }, function (errorObject) {
-        console.log("The read operation failed: " + errorObject.code);
-      });
+{
+author: 'crystalballz1', 
+title: 'Fantastical Dragon Wings', 
+description: 'Mythology Dragons on a newly decorated landscape.', 
+imageurl: 'images/still-life/stilllife3.jpg' }
+];
 
-    var imageUpped;
 
-    $scope.addImage = function(new_image){
-    filepicker.setKey("AmLcWLY62RNK9TLhg66Gmz");
-    filepicker.pick(
-      {
-        mimetypes: ['image/*', 'text/plain'],
-        container: 'window',
-        services:['COMPUTER'],
-      },
-      function(Blob){
-        // console.log(JSON.stringify(Blob));
-        imageUpped = Blob.url;
-        console.log(imageUpped);
-      },
-      function(FPError){
-        console.log(FPError.toString());
-      }
-    );
-    }
+// });
+
+
+// need to add in ng-toggle http://geniuscarrier.com/ng-toggle-in-angularjs/
+// galleryApp.controller("topMenu", function($scope){
+// 	$scope.custom = true;
+// 	$scope.toggleCustom = function() {
+// 		$scope.custom = $scope.custom === false ? true: false;
+// });
 
 
 
 
-    //pushing is important, this is how info is delivered onto the server
-    $scope.addPortfolio = function(new_portfolio){
-      var pushRef = new Firebase(FIREBASE_URL + '/portfolios');
-      pushRef.push({
-        name: new_portfolio.name,
-        creationDate: Firebase.ServerValue.TIMESTAMP,
-        title: new_portfolio.title,
-        description: new_portfolio.description,
-        imageurl: imageUpped
-      });
+// //galleryApp.controller("pageControllers", function($scope, FIREBASE_URL, $firebaseArray, $firebaseObject){
 
-    };
+
+
+// // =======TESTING ON PUSHING BASE ON CLASS NOTES=======
+//     var ref = new Firebase(FIREBASE_URL);
+//     var postRef = ref.child('portfolios');
+
+//     $scope.portfolios = $firebaseArray(postRef);
+
+//     console.log(postRef.key());
+
+//     postRef.on('value', function(snapshot){
+//       console.log(snapshot.val());
+//       }, function (errorObject) {
+//         console.log("The read operation failed: " + errorObject.code);
+//       });
+
+//     var imageUpped;
+
+//     $scope.addImage = function(new_image){
+//     filepicker.setKey("AmLcWLY62RNK9TLhg66Gmz");
+//     filepicker.pick(
+//       {
+//         mimetypes: ['image/*', 'text/plain'],
+//         container: 'window',
+//         services:['COMPUTER'],
+//       },
+//       function(Blob){
+//         // console.log(JSON.stringify(Blob));
+//         imageUpped = Blob.url;
+//         console.log(imageUpped);
+//       },
+//       function(FPError){
+//         console.log(FPError.toString());
+//       }
+//     );
+//     }
+
+
+
+
+//     //pushing is important, this is how info is delivered onto the server
+//     $scope.addPortfolio = function(new_portfolio){
+//       var pushRef = new Firebase(FIREBASE_URL + '/portfolios');
+//       pushRef.push({
+//         name: new_portfolio.name,
+//         creationDate: Firebase.ServerValue.TIMESTAMP,
+//         title: new_portfolio.title,
+//         description: new_portfolio.description,
+//         imageurl: imageUpped
+//       });
+
+//     };
 
 
     // postRef.set({
@@ -80,41 +120,9 @@ galleryApp.controller("pageControllers", function($scope, FIREBASE_URL, $firebas
     //   $scope.portfolios.push( new_portfolio );
     //   $scope.add_portfolio = {};
     // };
+// });
 
 // =======TESTING ON PUSHING BASE ON CLASS NOTES=======
 
 
 
-// =================WHAT I REALLY WANT TO PUSH==========================
-
-// $scope.portfolio = [
-
-// {
-// author: 'universe511', 
-// title: 'Flower on Still Water', 
-// description: 'Floating on a distant faraway sea, I think of you', 
-// imageurl: 'images/still-life/stilllife1.jpg' },
-
-// {
-// author: 'glassy8989', 
-// title: 'Green Leaves', 
-// description: 'This is all too much green.', 
-// imageurl: 'images/still-life/stilllife2.jpg' },
-
-// {
-// author: 'crystalballz1', 
-// title: 'Fantastical Dragon Wings', 
-// description: 'Mythology Dragons on a newly decorated landscape.', 
-// imageurl: 'images/still-life/stilllife3.jpg' }
-// ];
-
-
-// });
-
-
-// need to add in ng-toggle http://geniuscarrier.com/ng-toggle-in-angularjs/
-// galleryApp.controller("topMenu", function($scope){
-// 	$scope.custom = true;
-// 	$scope.toggleCustom = function() {
-// 		$scope.custom = $scope.custom === false ? true: false;
-// });

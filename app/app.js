@@ -1,5 +1,8 @@
-var galleryApp = angular.module ("galleryApp",["ngRoute", "firebase"])/
-constant('FIREBASE_URL','https://sw-final-project.firebaseio.com/');
+var galleryApp = angular.module ("galleryApp",["ngRoute"]);
+
+// firebase addition
+// var galleryApp = angular.module ("galleryApp",["ngRoute", "firebase"])/
+// constant('FIREBASE_URL','https://sw-final-project.firebaseio.com/');
 
 //extra line for controller since its already written in, redundant
 // var PortfolioListController = angular.module('PortfolioListController', []);
