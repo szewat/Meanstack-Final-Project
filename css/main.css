@@ -21,36 +21,82 @@ ul {
 body {
   font-family: "Helvetica", sans-serif;
   font-size: 16px;
-  color: #000; }
-
-p {
-  line-height: 20px; }
+  color: #000;
+  font-weight: lighter;
+  line-height: 20px;
+  background: #fff; }
 
 /* HEADER */
-header h1 {
-  font-family: "Pacifico", serif;
-  font-size: 32px;
-  margin: 20px 0;
-  text-align: center;
-  letter-spacing: 2px; }
+.toolbar {
+  height: 45px; }
+  .toolbar h1 {
+    font-family: "Pacifico", serif;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 2px;
+    position: relative; }
 
 .top-links li {
   background-color: lightgray;
-  padding: 20px;
+  padding: 13px;
   border-bottom: #999 1px solid; }
 
+/* Hamburger Menu */
+.menu-icon {
+  position: relative;
+  display: inline-block;
+  width: 25px;
+  text-indent: -999px;
+  margin: 5px 0 0 10px;
+  float: left;
+  top: 1px; }
+
+.border-icon {
+  height: 21px;
+  border-top: 4px solid #000;
+  border-bottom: 4px solid #000; }
+
+.border-icon:before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 100%;
+  border-top: 4px solid #000; }
+
+/* Hamburger Menu */
 /* END HEADER */
 /* MAIN CONTENT */
 .main-content {
-  margin: 30px 0;
-  padding: 0 50px; }
-
-.portfolio-wrapper {
-  margin: 30px 0 0 0; }
-
-.portfolio-wrapper:first-child {
-  margin: 0;
-  padding: 0; }
+  margin: 20px 0;
+  padding: 0 20px; }
+  .main-content .portfolio-wrapper {
+    margin: 30px 0 0 0;
+    width: 100%;
+    border: 1px solid #999; }
+  .main-content .portfolio-wrapper:first-child {
+    margin: 0;
+    padding: 0; }
+  .main-content img {
+    float: left;
+    display: inline-block;
+    width: 35%; }
+  .main-content .portfolio-intro {
+    float: left;
+    display: block;
+    width: 55%;
+    margin-left: 10px;
+    padding: 10px; }
+  .main-content .portfolio-title {
+    font-weight: bold;
+    color: #444; }
+  .main-content .portfolio-by {
+    display: block;
+    float: left;
+    margin: 0 5px 0 0; }
+  .main-content .portfolio-author {
+    display: block;
+    float: left; }
 
 /* END MAIN CONTENT */
 .social li {

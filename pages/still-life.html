@@ -1,9 +1,7 @@
 <div class="portfolio-wrapper clearfix">
-	<img src="images/still-life/still-life1.jpg" width="100%;"/>
-</div>
-<div class="portfolio-wrapper clearfix">
-	<img src="images/still-life/still-life2.jpg" width="100%;"/>
-</div>
-<div class="portfolio-wrapper clearfix">
-	<img src="images/still-life/still-life3.jpg" width="100%;"/>
+	<img ng-src="{{ portfolio.imageurl }}" alt="{{ portfolio.title }}"/>
+	<div class="portfolio-intro">
+		<p class="portfolio-title" ng-bind="portfolio.title">{{ portfolio.title}}</p>
+		<p class="portfolio-author" ng-bind="portfolio.author">{{ portfolio.author }}</p>
+	</div>
 </div>

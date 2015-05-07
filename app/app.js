@@ -1,27 +1,30 @@
-var galleryApp = angular.module ("galleryApp",["ngRoute","appControllers"]);
+var galleryApp = angular.module ("galleryApp",["ngRoute"])
 
-var appControllers = angular.module ("appControllers", []);
+//extra line for controller since its already written in, redundant
+// var PortfolioListController = angular.module('PortfolioListController', []);
 
 galleryApp.config(["$routeProvider", function($routeProvider){
-	$routeProvider.
-		when("/still-life",{
+	$routeProvider
+		.when("/still-life",{
 			templateUrl: "pages/still-life.html",
 			controller: "pageControllers"
-		}).
-		when("/landscape",{
+		})
+		.when("/landscape",{
 			templateUrl: "pages/landscape.html",
 			controller: "pageControllers"
-		}).
-		when("/about",{
+		})
+		.when("/about",{
 			templateUrl: "pages/about.html",
 			controller: "pageControllers"
-		}).
-		when("/home",{
+		})
+		.when("/home",{
 			templateUrl: "pages/home.html",
 			controller: "pageControllers"
-		}).
-		otherwise ({
-			redirectTo:"/home"
+		})
+		.otherwise ({
+			templateUrl: "pages/404.html",
+			redirectTo:"/404"
 		});
 
 }]);
+

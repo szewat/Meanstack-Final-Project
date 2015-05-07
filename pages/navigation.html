@@ -1,5 +1,10 @@
-<a ng-href="#/"><h1>Artist Alley</h1></a>
-<nav class="top-links">
+<div class="toolbar">
+	<div class="hamburger-menu"> <!-- ng-controller="topMenu" -->
+	<a href="#" class="menu-icon border-icon">menu icon</a> <!--ng-click="toggleCustom()" aria-label="Toggle ngShow"-->
+	</div>
+	<a ng-href="#/home"><h1>Artist Alley</h1></a>
+</div>
+<nav ng-hide="custom" class="top-links">
 	<ul>
 		<a ng-href="#/still-life"><li>Still Life</li></a>
 		<a ng-href="#/landscape"><li>Landscape</li></a>
