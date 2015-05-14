@@ -18,6 +18,10 @@ input, button {
   width: 100%;
   margin: 10px; }
 
+textarea {
+  width: 100%;
+  margin: 10px; }
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -145,8 +149,11 @@ header .border-icon:before {
     padding: 20px 60px; }
   .main-content h2 {
     font-size: 24px; }
-  .main-content input, .main-content button {
+  .main-content input, .main-content button, .main-content textarea {
     max-width: 300px; }
+  .main-content input.nodesign {
+    margin: 0;
+    max-width: 32px; }
 
 @media (min-width: 758px) {
   .main-content {
@@ -164,7 +171,7 @@ header .border-icon:before {
     .main-content .portfolio-intro {
       width: 100%;
       margin-left: 0; }
-    .main-content input, .main-content button {
+    .main-content input, .main-content button, .main-content textarea {
       max-width: 450px; } }
 @media (min-width: 992px) {
   .main-content {

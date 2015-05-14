@@ -122,5 +122,9 @@
 
 // =======TESTING ON PUSHING BASE ON CLASS NOTES=======
 
+// $scope.list = {
+//   landscape : 'Landscape',
+//   stilllife : 'Still Life',
+// };
 
 

@@ -11,3 +11,35 @@
 	</div>
 </div>	
 </div>
+
+
+<div class="full-width clearfix">
+    <header class="portfolio-info">
+      <h2>Add a Portfolio</h2>
+      <form name="add_portfolio"  novalidate > <!-- ng-submit="addPortfolio()" -->
+        <p class="error" ng-show="message" >{{ message }}</p>
+
+        <input name="title" type="text" placeholder="title" ng-required="true" ng-model="adding_portfolio.title" />
+        <p class="error" ng-show="add_portfolio.title.$invalid && add_portfolio.title.$touched">Must enter a title.</p>
+
+        <input name="name" type="text" placeholder="name" ng-required="true" ng-model="adding_portfolio.name" />
+        <p class="error" ng-show="add_portfolio.name.$invalid && add_portfolio.name.$touched">Must enter a name.</p>
+
+        <input type="file" id="file-upload" ng-click="addImage()" required="true"/>
+
+
+        <textarea name="description" placeholder="description" ng-required="true" ng-model="adding_portfolio.description"></textarea>
+        <p class="error" ng-show="add_portfolio.description.$invalid && add_portfolio.description.$touched">Must enter a description.</p>
+
+
+
+		<p>Pick a section</p>
+		<label class="clearfix"><input class="nodesign" type="checkbox" name="landscape" value="Landscape">Landscape</label><br>
+
+		<label class="clearfix"><input class="nodesign" type="checkbox" name="stilllife" value="Still Life">Still Life</label> 
+
+
+        <button class="btn btn-success" ng-disabled="add_portfolio.$invalid" type="button" ng-click="addPortfolio( adding_portfolio )">Add Portfolio</button>
+      </form>
+    </header>
+  </div>
