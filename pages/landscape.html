@@ -1,16 +1,13 @@
-<div class="portfolio-wrapper clearfix">
-	<img src="images/landscape/landscape1_200px.jpg" width="100%;"/>
-	<div class="portfolio-intro">
-		<div class="portfolio-title">Botanical Garden</div>
-		<div class="portfolio-creator">
-			<div class="portfolio-by">by</div>
-			<div class="portfolio-author">Universe000</div>
+<div class="portfolio-wrapper clearfix" ng-repeat="landscape in landscapes">
+	<div class="portfolio clearfix">	
+		<img ng-src="{{ landscape.imageurl }}" alt="{{ landscape.title }}"/>
+		<div class="portfolio-intro">
+			<div class="portfolio-title" ng-bind="landscape.title"></div>
+			<div class="portfolio-creator">
+				<div class="portfolio-by">by</div>		
+				<div class="portfolio-author" ng-bind="landscape.author"></div>
+			</div>
 		</div>
 	</div>
-</div>
-<div class="portfolio-wrapper clearfix">
-	<img src="images/landscape/landscape2_200px.jpg" width="100%;"/>
-</div>
-<div class="portfolio-wrapper clearfix">
-	<img src="images/landscape/landscape3_200px.jpg" width="100%;"/>
+</div>	
 </div>

@@ -1,0 +1,13 @@
+<div class="portfolio-wrapper clearfix" ng-repeat="stilllife in stilllifes">
+	<div class="portfolio clearfix">	
+		<img ng-src="{{ stilllife.imageurl }}" alt="{{ stilllife.title }}"/>
+		<div class="portfolio-intro">
+			<div class="portfolio-title" ng-bind="stilllife.title"></div>
+			<div class="portfolio-creator">
+				<div class="portfolio-by">by</div>		
+				<div class="portfolio-author" ng-bind="stilllife.author"></div>
+			</div>
+		</div>
+	</div>
+</div>	
+</div>

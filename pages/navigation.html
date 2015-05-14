@@ -1,13 +1,18 @@
-<div class="toolbar">
+<div class="toolbar clearfix">
 	<div class="hamburger-menu"> <!-- ng-controller="topMenu" -->
 	<a href="#" class="menu-icon border-icon">menu icon</a> <!--ng-click="toggleCustom()" aria-label="Toggle ngShow"-->
 	</div>
-	<a ng-href="#/home"><h1>Artist Alley</h1></a>
+	<h1><a ng-href="#/home">ARTIST ALLEY</a></h1>
 </div>
-<nav ng-hide="custom" class="top-links">
+
+<nav class="top-links clearfix">
 	<ul>
-		<a ng-href="#/still-life"><li>Still Life</li></a>
+		<a ng-href="#/stilllife"><li>Still Life</li></a>
 		<a ng-href="#/landscape"><li>Landscape</li></a>
 		<a ng-href="#/about"><li>About</li></a>
 	</ul>
+	<ul>
+		<a ng-href="#/login"><li>Login</li></a>
+		<a ng-href="#/register"><li>Sign Up</li></a>
+	</ul>	
 </nav>

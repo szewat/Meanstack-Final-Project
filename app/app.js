@@ -1,16 +1,16 @@
-var galleryApp = angular.module ("galleryApp",["ngRoute"]);
+// var galleryApp = angular.module ("galleryApp",["ngRoute"]);
 
 // firebase addition
-// var galleryApp = angular.module ("galleryApp",["ngRoute", "firebase"])/
-// constant('FIREBASE_URL','https://sw-final-project.firebaseio.com/');
+var galleryApp = angular.module("galleryApp",["ngRoute","appControllers","firebase"]).
+constant('FIREBASE_URL','https://sw-final-project.firebaseio.com/');
 
-//extra line for controller since its already written in, redundant
-// var PortfolioListController = angular.module('PortfolioListController', []);
+//extra line for controller since its already written in, maybe redundant
+var appControllers = angular.module("appControllers", []);
 
 galleryApp.config(["$routeProvider", function($routeProvider){
 	$routeProvider
-		.when("/still-life",{
-			templateUrl: "pages/still-life.html",
+		.when("/stilllife",{
+			templateUrl: "pages/stilllife.html",
 			controller: "pageControllers"
 		})
 		.when("/landscape",{
@@ -21,6 +21,14 @@ galleryApp.config(["$routeProvider", function($routeProvider){
 			templateUrl: "pages/about.html",
 			controller: "pageControllers"
 		})
+		.when("/login",{
+			templateUrl: "pages/login.html",
+			controller: "registration"
+		})
+		.when("/register",{
+			templateUrl: "pages/register.html",
+			controller: "registration"
+		})				
 		.when("/home",{
 			templateUrl: "pages/home.html",
 			controller: "pageControllers"

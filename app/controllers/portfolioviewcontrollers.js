@@ -1,3 +1,3 @@
-galleryApp.controller("PortfolioViewerController", function($scope){
+// galleryApp.controller("PortfolioViewerController", function($scope){
 
-});
+// });
