@@ -8,13 +8,15 @@ $margin: 10px;
 $padding: 10px;
 
 $font-family: 'Helvetica', sans-serif;
-$Montserrat: 'Montserrat', serif;
+$Montserrat: 'Montserrat', 'Helvetica', sans-serif;
+$Oswald: 'Oswald', 'Helvetica', sans-serif;
 $font-size: 16px;
 
 @import url('normalize.css');
 @import url('clearfix.css');
 @import url('font-awesome.css');
 @import url('http://fonts.googleapis.com/css?family=Montserrat:700');
+@import url('http://fonts.googleapis.com/css?family=Oswald');
 
 * {
 	position: relative;
@@ -34,6 +36,10 @@ input, button{
 	width: 100%;
 	margin: $margin;
 }
+
+input.nodesign[type="radio"]{
+	width:20px;
+	}	
 
 textarea{
 	width: 100%;
@@ -68,7 +74,12 @@ header{
 	.toolbar {
 		height: 45px;
 		position: relative;
-		background: #070800;			
+		background: #070800;
+
+	.hamburger-menu{
+		position: absolute;
+		z-index: 5;
+	}
 
 		h1{	
 			font-family: $Montserrat;
@@ -84,9 +95,16 @@ header{
 	}
 
 	.top-links{	
+		display: none;
+	}
+
+	.mobile-links, .top-links{	
 		position: relative;
 
 		li {
+			font-family: $Oswald;
+			text-transform: uppercase;
+			letter-spacing: 2px;
 			padding: $padding*1.3;
 			border-bottom: $lightgrey 1px solid;
 		}
@@ -140,6 +158,7 @@ header{
 			background: $darkgrey;
 			float: left;
 			width: 66.6666%;
+			display: block;
 
 			ul{
 				width: 30%;
@@ -230,6 +249,7 @@ header{
 	.full-width{
 		text-align: center;
 		padding: $padding*2 $padding*6;
+		clear: both;
 	}
 	h2{
 		font-size: $font-size*1.5;

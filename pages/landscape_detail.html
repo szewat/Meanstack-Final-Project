@@ -1,0 +1,8 @@
+<p ng-show="load_error_text">{{load_error_text}}</p>
+<div ng-repeat="landscape in landscapes" style="float:left; margin-right:12px;" >
+<h3> {{ landscape_username }} </h3>
+<img src="/images/{{landscape_username}}/landscape/{{landscape.filename}}">
+
+<p> {{ landscape.description }} </p>
+
+</div>

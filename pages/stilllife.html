@@ -5,9 +5,38 @@
 			<div class="portfolio-title" ng-bind="stilllife.title"></div>
 			<div class="portfolio-creator">
 				<div class="portfolio-by">by</div>		
-				<div class="portfolio-author" ng-bind="stilllife.author"></div>
+				<div class="portfolio-author" ng-bind="stilllife.username"></div>
 			</div>
 		</div>
 	</div>
 </div>	
+
+<div class="full-width">
+  <header class="portfolio-info">
+    <h2>Submit an Image</h2>
+    <form name="add_portfolio" novalidate> 
+      <p class="error" ng-show="message" >{{ message }}</p>
+
+      <input name="title" type="text" placeholder="title" ng-required="true" ng-model="adding_portfolio.title" />
+      <p class="error" ng-show="add_portfolio.title.$invalid && add_portfolio.title.$touched">Must enter a title.</p>
+
+      <input name="username" type="text" placeholder="username" ng-required="true" ng-model="adding_portfolio.username" />
+      <p class="error" ng-show="add_portfolio.username.$invalid && add_portfolio.username.$touched">Must enter an username.</p>
+
+      <input type="file" id="file-upload" ng-click="addImage()" required="true"/>
+
+
+      <textarea name="description" placeholder="description" ng-required="true" ng-model="adding_portfolio.description"></textarea>
+      <p class="error" ng-show="add_portfolio.description.$invalid && add_portfolio.description.$touched">Must enter a description.</p>
+
+
+
+      <p>Pick a section</p>
+      <input id="mylandscape" type="radio" name="category" value="landscape" class="nodesign" checked>Landscape<br/>
+      <input id="mystilllife" type="radio" name="category" value="stilllife" class="nodesign">Still Life<br/>
+
+
+      <button class="btn btn-success" ng-disabled="add_portfolio.$invalid" type="button" ng-click="addPortfolio( adding_portfolio )">Add Portfolio</button>
+    </form>
+  </header>
 </div>

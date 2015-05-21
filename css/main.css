@@ -2,6 +2,7 @@
 @import url("clearfix.css");
 @import url("font-awesome.css");
 @import url("http://fonts.googleapis.com/css?family=Montserrat:700");
+@import url("http://fonts.googleapis.com/css?family=Oswald");
 * {
   position: relative;
   -webkit-box-sizing: border-box;
@@ -17,6 +18,9 @@ input, button {
   height: 32px;
   width: 100%;
   margin: 10px; }
+
+input.nodesign[type="radio"] {
+  width: 20px; }
 
 textarea {
   width: 100%;
@@ -46,8 +50,11 @@ header .toolbar {
   height: 45px;
   position: relative;
   background: #070800; }
+  header .toolbar .hamburger-menu {
+    position: absolute;
+    z-index: 5; }
   header .toolbar h1 {
-    font-family: "Montserrat", serif;
+    font-family: "Montserrat", "Helvetica", sans-serif;
     font-size: 18px;
     text-align: center;
     letter-spacing: 1px;
@@ -56,8 +63,13 @@ header .toolbar {
   header .toolbar h1 a {
     color: #9EA800; }
 header .top-links {
+  display: none; }
+header .mobile-links, header .top-links {
   position: relative; }
-  header .top-links li {
+  header .mobile-links li, header .top-links li {
+    font-family: "Oswald", "Helvetica", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     padding: 13px;
     border-bottom: #ADBBBF 1px solid; }
 header .menu-icon {
@@ -95,7 +107,8 @@ header .border-icon:before {
   header .top-links {
     background: #595C66;
     float: left;
-    width: 66.6666%; }
+    width: 66.6666%;
+    display: block; }
     header .top-links ul {
       width: 30%;
       float: left;
@@ -146,7 +159,8 @@ header .border-icon:before {
     float: left; }
   .main-content .full-width {
     text-align: center;
-    padding: 20px 60px; }
+    padding: 20px 60px;
+    clear: both; }
   .main-content h2 {
     font-size: 24px; }
   .main-content input, .main-content button, .main-content textarea {
